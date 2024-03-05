@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Republic Day</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-[#ffffff]  place-items-center h-screen m-0 flex flex-col justify-center "> 
+  <div class="bg-[#fdfdfd] rounded-[4px] h-[100vh] w-[100vw] [box-shadow:0_3px_6px_rgba(0,_0,_0,_0.16),_0_3px_6px_rgba(0,_0,_0,_0.23)] text-center ">
+    <img src="./repub.png" alt="Republic day image" class="max-w-full h-auto md:max-w-screen-md md:h-96">
+    <div class="h-[50px] md:h-dvh"></div>
+    <div class="md:h-1000svh">
+      <h1 class="opacity-80 text-[#b43a3a] text-3xl md:text-9xl md:font-extrabold md:h-80%">BHARAT - THE MOTHER OF DEMOCRACY</h1>
+      <h2 class="opacity-80 text-[#1d1d21] text-3xl md:text-9xl md:font-extrabold">Respect the constitution of free India !!</h2>
+      <h1 class="opacity-80 text-[#b43a3a] text-3xl md:text-9xl md:font-extrabold md:h-80%">26th January</h1>
+      <div class="h-[50px]"></div>
+    </div>
+
+    <div id="display" class="text-4xl text-green-400 md:text-9xl md:font-extrabold h-[1000px] text-center"></div>
+    <script>
+      const queryString = window.location.search;
+      console.log(queryString);
+
+      const urlParams = new URLSearchParams(queryString);
+      const name = urlParams.get('name');
+      console.log(name);
+      if (name === "") {
+        document.getElementById("display").innerHTML = "YOU";
+      }
+      else {
+        document.getElementById("display").innerHTML = name;
+      }
+    </script>
+    <img src="./ui.png" alt="Independence" class="max-w-full h-auto">
+  </div>
+</body>
+</html>
